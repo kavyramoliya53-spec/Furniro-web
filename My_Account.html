@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account</title>
+
+    <link rel="stylesheet" href="My_Account.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="account_header">
+
+        <div class="logo">
+            MyStore
+        </div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="product_detail.html">Shop</a>
+            <a href="shopping_cart.html">
+                Cart
+                <span id="cartCount">0</span>
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- Account Container -->
+
+    <main class="account_container">
+
+        <h1>My Account</h1>
+
+        <div class="account_layout">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="account_sidebar">
+
+                <div class="profile_small">
+
+                    <div class="profile_image">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <h3 id="sideName">
+                        User
+                    </h3>
+
+                    <p id="sideEmail">
+                        user@example.com
+                    </p>
+
+                </div>
+
+
+                <button class="menu_btn active" onclick="showSection('dashboard', this)">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('profile', this)">
+                    <i class="fa-solid fa-user"></i>
+                    My Profile
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('orders', this)">
+                    <i class="fa-solid fa-box"></i>
+                    My Orders
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('wishlist', this)">
+                    <i class="fa-solid fa-heart"></i>
+                    Wishlist
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('cart', this)">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    My Cart
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('addresses', this)">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Addresses
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('payments', this)">
+                    <i class="fa-solid fa-credit-card"></i>
+                    Payments
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('settings', this)">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </button>
+
+
+                <button class="menu_btn" onclick="showSection('help', this)">
+                    <i class="fa-solid fa-circle-question"></i>
+                    Help & Support
+                </button>
+
+
+                <button class="menu_btn logout_btn" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </aside>
+
+
+
+            <!-- CONTENT -->
+
+            <section class="account_content">
+
+
+                <!-- ================= DASHBOARD ================= -->
+
+                <div id="dashboard" class="account_section active">
+
+                    <h2>Welcome, <span id="welcomeName">User</span>!</h2>
+
+                    <p class="section_text">
+                        Manage your account, orders and personal information.
+                    </p>
+
+
+                    <div class="summary_cards">
+
+                        <div class="summary_card">
+                            <i class="fa-solid fa-box"></i>
+
+                            <div>
+                                <h3 id="totalOrders">0</h3>
+                                <p>Total Orders</p>
+                            </div>
+                        </div>
+
+
+                        <div class="summary_card">
+                            <i class="fa-solid fa-heart"></i>
+
+                            <div>
+                                <h3 id="totalWishlist">0</h3>
+                                <p>Wishlist</p>
+                            </div>
+                        </div>
+
+
+                        <div class="summary_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <div>
+                                <h3 id="totalCart">0</h3>
+                                <p>Cart Items</p>
+                            </div>
+                        </div>
+
+
+                        <div class="summary_card">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            <div>
+                                <h3 id="totalSpent">₹0</h3>
+                                <p>Total Spent</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard_box">
+
+                        <h3>Recent Order</h3>
+
+                        <div id="recentOrder">
+                            No recent order.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PROFILE ================= -->
+
+                <div id="profile" class="account_section">
+
+                    <div class="section_header">
+
+                        <h2>My Profile</h2>
+
+                        <button onclick="enableProfileEdit()">
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="profile_big">
+
+                            <div class="profile_image big">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <button type="button" onclick="changePhoto()">
+                                Change Photo
+                            </button>
+
+                        </div>
+
+
+                        <div class="form_grid">
+
+                            <div class="form_group">
+
+                                <label>Full Name</label>
+
+                                <input type="text" id="profileName" disabled>
+
+                            </div>
+
+
+                            <div class="form_group">
+
+                                <label>Email</label>
+
+                                <input type="email" id="profileEmail" disabled>
+
+                            </div>
+
+
+                            <div class="form_group">
+
+                                <label>Mobile Number</label>
+
+                                <input type="text" id="profileMobile" disabled>
+
+                            </div>
+
+
+                            <div class="form_group">
+
+                                <label>Date of Birth</label>
+
+                                <input type="date" id="profileDob" disabled>
+
+                            </div>
+
+                        </div>
+
+
+                        <button type="submit" id="saveProfileBtn" class="primary_btn" style="display:none;">
+                            Save Changes
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- ================= ORDERS ================= -->
+
+                <div id="orders" class="account_section">
+
+                    <h2>My Orders</h2>
+
+                    <div id="ordersList">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= WISHLIST ================= -->
+
+                <div id="wishlist" class="account_section">
+
+                    <h2>My Wishlist</h2>
+
+                    <div id="wishlistList" class="product_list">
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= CART ================= -->
+
+                <div id="cart" class="account_section">
+
+                    <h2>My Cart</h2>
+
+                    <div id="accountCart">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ADDRESSES ================= -->
+
+                <div id="addresses" class="account_section">
+
+                    <div class="section_header">
+
+                        <h2>My Addresses</h2>
+
+                        <button onclick="addAddress()">
+                            + Add Address
+                        </button>
+
+                    </div>
+
+
+                    <div id="addressList">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PAYMENTS ================= -->
+
+                <div id="payments" class="account_section">
+
+                    <h2>Payment Methods</h2>
+
+
+                    <div class="payment_card">
+
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+
+                            <h3>Cash on Delivery</h3>
+
+                            <p>
+                                Available for your orders
+                            </p>
+                        </div>
+
+                        <span class="payment_status">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <div class="payment_card">
+
+                        <div>
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <h3>Online Payment</h3>
+
+                            <p>
+                                Credit / Debit Card / UPI
+                            </p>
+                        </div>
+
+                        <span class="payment_status">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <button class="primary_btn" onclick="addPayment()">
+                        + Add Payment Method
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= SETTINGS ================= -->
+
+                <div id="settings" class="account_section">
+
+                    <h2>Account Settings</h2>
+
+
+                    <div class="setting_item">
+
+                        <div>
+
+                            <h3>Change Password</h3>
+
+                            <p>
+                                Update your account password.
+                            </p>
+
+                        </div>
+
+                        <button onclick="changePassword()">
+                            Change
+                        </button>
+
+                    </div>
+
+
+                    <div class="setting_item">
+
+                        <div>
+
+                            <h3>Email Notifications</h3>
+
+                            <p>
+                                Receive updates about your orders.
+                            </p>
+
+                        </div>
+
+                        <input type="checkbox" id="emailNotification" checked>
+
+                    </div>
+
+
+                    <div class="setting_item">
+
+                        <div>
+
+                            <h3>Order Notifications</h3>
+
+                            <p>
+                                Receive order status updates.
+                            </p>
+
+                        </div>
+
+                        <input type="checkbox" id="orderNotification" checked>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= HELP ================= -->
+
+                <div id="help" class="account_section">
+
+                    <h2>Help & Support</h2>
+
+
+                    <div class="help_card">
+
+                        <i class="fa-solid fa-circle-question"></i>
+
+                        <div>
+
+                            <h3>Frequently Asked Questions</h3>
+
+                            <p>
+                                Find answers to common questions.
+                            </p>
+
+                        </div>
+
+                        <button onclick="showFAQ()">
+                            View FAQ
+                        </button>
+
+                    </div>
+
+
+                    <div class="help_card">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <div>
+
+                            <h3>Contact Support</h3>
+
+                            <p>
+                                Need help? Contact our support team.
+                            </p>
+
+                        </div>
+
+                        <button onclick="contactSupport()">
+                            Contact
+                        </button>
+
+                    </div>
+
+
+                    <div class="help_card">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <div>
+
+                            <h3>Report a Problem</h3>
+
+                            <p>
+                                Tell us if you have a problem.
+                            </p>
+
+                        </div>
+
+                        <button onclick="reportProblem()">
+                            Report
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="My_Account.js"></script>
+
+</body>
+
+</html>

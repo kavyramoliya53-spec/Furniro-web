@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - MyStore</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="login_page">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="login_left">
+
+            <div class="brand">
+
+                <h1>MyStore</h1>
+
+                <p>
+                    Shop your favorite products
+                    with ease.
+                </p>
+
+            </div>
+
+
+            <div class="login_image">
+
+                <div class="image_content">
+
+                    <h2>
+                        Welcome Back!
+                    </h2>
+
+                    <p>
+                        Login to access your
+                        account, orders and wishlist.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="login_right">
+
+
+            <div class="login_box">
+
+
+                <h2>
+                    Login
+                </h2>
+
+                <p class="login_text">
+                    Enter your details to continue
+                </p>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form_group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input_box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input type="email" id="email" placeholder="Enter your email" autocomplete="email">
+
+                        </div>
+
+                        <small id="emailError" class="error">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form_group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input_box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input type="password" id="password" placeholder="Enter your password"
+                                autocomplete="current-password">
+
+                            <i class="fa-solid fa-eye password_icon" id="togglePassword">
+                            </i>
+
+                        </div>
+
+                        <small id="passwordError" class="error">
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER / FORGOT -->
+
+                    <div class="login_options">
+
+                        <label>
+
+                            <input type="checkbox" id="rememberMe">
+
+                            Remember me
+
+                        </label>
+
+
+                        <a href="forgot-password.html">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button type="submit" class="login_btn">
+
+                        Login
+
+                    </button>
+
+
+                    <!-- MESSAGE -->
+
+                    <p id="loginMessage" class="login_message">
+                    </p>
+
+
+                </form>
+
+
+
+                <!-- REGISTER -->
+
+                <div class="register_text">
+
+                    <span>
+                        Don't have an account?
+                    </span>
+
+                    <a href="signup.html">
+                        Create Account
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

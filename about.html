@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+
+            <div class="left-bar">
+                <span id="userEmail"></span>
+                <span id="userContact"></span>
+            </div>
+
+            <div class="top-right">
+                <select>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Spanish</option>
+                </select>
+                <select>
+                    <option>USD</option>
+                    <option>USA</option>
+                    <option>India</option>
+                    <option>UK</option>
+                </select>
+                <a href="./My_Account.html"><span id="userName"></span><i class="fa-solid fa-user"></i></a>
+                <a href="./wishlist.html">Wishlist <i class="fa-solid fa-heart"></i></a>
+                <a href="./shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-header">
+        <div class="main-container">
+
+            <h1 class="logo">Hekto</h1>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <ul class="links" id="nav-links">
+                <li><a class="active" href="home.html">Home</a></li>
+                <select class="dropdown" onchange="location = this.value;">
+                    <option>Pages</option>
+                    <option value="about.html">About Us</option>
+                    <option value="shop_list_silder.html">Shop</option>
+                    <option value="single_blog.html">single blog</option>
+                    <option value="hecto_demo.html">Hecto Demo</option>
+                    <option value="faq.html">FAQ</option>
+                </select>
+                <li><a href="grid_default.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="shop_list.html">Shop</a></li>
+                <li><a href="contect.html">Contact</a></li>
+            </ul>
+            <div class="Search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr">
+                    <div class="search_icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.7099 20.2899L17.9999 16.6099C19.44 14.8143 20.1374 12.5352 19.9487 10.2412C19.76 7.94721 18.6996 5.81269 16.9854 4.27655C15.2713 2.74041 13.0337 1.91941 10.7328 1.98237C8.43194 2.04534 6.24263 2.98747 4.61505 4.61505C2.98747 6.24263 2.04534 8.43194 1.98237 10.7328C1.91941 13.0337 2.74041 15.2713 4.27655 16.9854C5.81269 18.6996 7.94721 19.76 10.2412 19.9487C12.5352 20.1374 14.8143 19.44 16.6099 17.9999L20.2899 21.6799C20.3829 21.7736 20.4935 21.848 20.6153 21.8988C20.7372 21.9496 20.8679 21.9757 20.9999 21.9757C21.1319 21.9757 21.2626 21.9496 21.3845 21.8988C21.5063 21.848 21.6169 21.7736 21.7099 21.6799C21.8901 21.4934 21.9909 21.2442 21.9909 20.9849C21.9909 20.7256 21.8901 20.4764 21.7099 20.2899ZM10.9999 17.9999C9.61544 17.9999 8.26206 17.5894 7.11091 16.8202C5.95977 16.051 5.06256 14.9578 4.53275 13.6787C4.00293 12.3996 3.86431 10.9921 4.13441 9.63427C4.4045 8.27641 5.07119 7.02912 6.05016 6.05016C7.02912 5.07119 8.27641 4.4045 9.63427 4.13441C10.9921 3.86431 12.3996 4.00293 13.6787 4.53275C14.9578 5.06256 16.051 5.95977 16.8202 7.11091C17.5894 8.26206 17.9999 9.61544 17.9999 10.9999C17.9999 12.8564 17.2624 14.6369 15.9497 15.9497C14.6369 17.2624 12.8564 17.9999 10.9999 17.9999Z"
+                                fill="url(#paint0_linear_2793_752)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2793_752" x1="1.979" y1="1.979" x2="25.4288"
+                                    y2="16.376" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F3F9FF" />
+                                    <stop offset="1" stop-color="#F1F0FF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="shop-main">
+        <div class="shop-grid">
+            <h1>About Us</h1>
+            <div class="menu">
+                <a href="./home.html">Home</a>
+                <a href="">Pages</a>
+                <a href="./about.html">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- business -->
+    <div class="business_section">
+        <div class="business_container">
+
+            <div class="image_business">
+                <img src="image/Business.jpg" alt="">
+            </div>
+
+            <div class="business_content">
+                <h2>Know About Our Ecomerce Business, History</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices mattis aliquam,
+                    malesuada diam est. Malesuada sem tristique amet erat vitae eget dolor lobortis. Accumsan faucibus
+                    vitae lobortis quis bibendum quam.</p>
+
+                <button class="button">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Features -->
+    <div class="offer">
+
+        <div class="offer_section">
+            <h1>Our Features</h1>
+        </div>
+        <div class="offer_content">
+            <div class="offer_collection">
+
+                <div class="Offer_item">
+                    <div class="offer_box">
+                        <img src="image/free-delivery 1.png" alt="">
+                    </div>
+                    <div class="offer_text">
+                        <h3>24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+
+                    </div>
+                </div>
+                <div class="Offer_item">
+                    <div class="offer_box">
+                        <img src="image/cashback 1.png" alt="">
+                    </div>
+                    <div class="offer_text">
+                        <h3>24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    </div>
+                </div>
+
+                <div class="Offer_item">
+                    <div class="offer_box">
+                        <img src="image/premium-quality 1.png" alt="">
+                    </div>
+                    <div class="offer_text">
+                        <h3>24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    </div>
+                </div>
+
+                <div class="Offer_item">
+                    <div class="offer_box">
+                        <img src="image/24-hours-support 1.png" alt="">
+                    </div>
+                    <div class="offer_text">
+                        <h3>24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <section class="client-section">
+        <h2>Our Client Say!</h2>
+
+        <div class="client-box">
+
+            <div class="client-images">
+                <img src="image/people (2).jpg" alt="">
+                <img src="image/people (3).jpg" alt="">
+                <img src="image/people.jpg" alt="">
+            </div>
+
+            <div class="client-name">Selina Gomez</div>
+            <div class="client-role">Ceo At Webby Digital</div>
+
+            <p class="client-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Non duis ultrices quam vel dui sollicitudin aliquet id arcu.
+                Nam vitae a enim nunc, sed sapien egestas ac nam.
+                Tristique ultrices dolor aliquam lacus volutpat praesent.
+            </p>
+
+            <div class="client-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-container">
+
+            <!-- Left Section -->
+            <div class="footer-left">
+                <h2 class="logo">Hekto</h2>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter Email Address">
+                    <button>Sign Up</button>
+                </div>
+
+                <p class="contact">Contact Info</p>
+                <p class="address">
+                    17 Princess Road, London, Greater London NW1 8JR, UK
+                </p>
+            </div>
+
+            <!-- Categories -->
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+
+                    <li><a href="">Laptops & Computers</a></li>
+                    <li><a href="">Cameras & Photography</a></li>
+                    <li><a href="">Smart Phones & Tablets</a></li>
+                    <li><a href="">Video Games & Consoles</a></li>
+                    <li><a href="">Waterproof Headphones</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Care -->
+            <div class="footer-column">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="./My_Account.html">My Account</a></li>
+                    <li><a href="">Discount</a></li>
+                    <li><a href="">Returns</a></li>
+                    <li><a href="">Orders History</a></li>
+                    <li><a href="">Order Tracking</a></li>
+                </ul>
+            </div>
+
+            <!-- Pages -->
+            <div class="footer-column">
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="./blog.html">Blogs</a></li>
+                    <li><a href="">Browse the Shop</a></li>
+                    <li><a href="">Category</a></li>
+                    <li><a href="">Pre-Built Pages</a></li>
+                    <li><a href="">Visual Composer Elements</a></li>
+                    <li><a href="">WooCommerce Pages</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>©Webecy - All Rights Reserved</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+</body>
+
+</html>

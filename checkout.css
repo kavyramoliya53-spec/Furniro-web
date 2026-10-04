@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* Header */
+
+.checkout_header {
+    width: 100%;
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.back_cart {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+}
+
+
+/* Main */
+
+.checkout_container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.checkout_container h1 {
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+
+/* Layout */
+
+.checkout_content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+
+/* Customer Box */
+
+.customer_box {
+    width: 60%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.customer_box h2,
+.order_box h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+.form_group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    border-color: #333;
+}
+
+.form_group textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+/* City State */
+
+.address_row {
+    display: flex;
+    gap: 15px;
+}
+
+.address_row .form_group {
+    width: 50%;
+}
+
+
+/* Payment */
+
+.payment_options {
+    margin-bottom: 25px;
+}
+
+.payment_option {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment_option input {
+    margin-right: 10px;
+}
+
+
+/* Button */
+
+.place_order_btn {
+    width: 100%;
+    padding: 15px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.place_order_btn:hover {
+    background: #333;
+}
+
+
+/* Order Box */
+
+.order_box {
+    width: 40%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    position: sticky;
+    top: 20px;
+}
+
+
+/* Product */
+
+.checkout_product {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout_product img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product_info {
+    flex: 1;
+}
+
+.product_info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.product_info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+/* Price */
+
+.price_details {
+    margin-top: 20px;
+}
+
+.price_row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.total_row {
+    border-top: 2px solid #222;
+    margin-top: 10px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .checkout_content {
+        flex-direction: column;
+    }
+
+    .customer_box,
+    .order_box {
+        width: 100%;
+    }
+
+    .address_row {
+        flex-direction: column;
+    }
+
+    .address_row .form_group {
+        width: 100%;
+    }
+
+}

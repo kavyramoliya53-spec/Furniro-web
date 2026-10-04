@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="checkout_header">
+        <div class="logo">
+            My Store
+        </div>
+
+        <a href="shopping_cart.html" class="back_cart">
+            ← Back to Cart
+        </a>
+    </header>
+
+
+    <!-- Main Checkout -->
+    <main class="checkout_container">
+
+        <h1>Checkout</h1>
+
+        <div class="checkout_content">
+
+            <!-- Customer Details -->
+            <section class="customer_box">
+
+                <h2>Billing Details</h2>
+
+                <form id="checkoutForm">
+
+                    <div class="form_group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label>Address</label>
+                        <textarea id="address" placeholder="Enter your complete address" required></textarea>
+                    </div>
+
+                    <div class="address_row">
+
+                        <div class="form_group">
+                            <label>City</label>
+                            <input type="text" id="city" placeholder="City" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label>State</label>
+                            <input type="text" id="state" placeholder="State" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form_group">
+                        <label>PIN Code</label>
+                        <input type="text" id="pincode" placeholder="Enter PIN code" required>
+                    </div>
+
+
+                    <!-- Payment -->
+                    <h2>Payment Method</h2>
+
+                    <div class="payment_options">
+
+                        <label class="payment_option">
+                            <input type="radio" name="payment" value="cod" checked>
+                            Cash on Delivery
+                        </label>
+
+                        <label class="payment_option">
+                            <input type="radio" name="payment" value="online">
+                            Online Payment
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit" class="place_order_btn">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- Order Summary -->
+            <section class="order_box">
+
+                <h2>Your Order</h2>
+
+                <div id="checkoutProducts"></div>
+
+                <div class="price_details">
+
+                    <div class="price_row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+
+                    <div class="price_row">
+                        <span>Shipping</span>
+                        <span id="shipping">₹0</span>
+                    </div>
+
+                    <div class="price_row total_row">
+                        <span>Total</span>
+                        <span id="total">₹0</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>
